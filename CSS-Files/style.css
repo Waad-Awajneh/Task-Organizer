@@ -1,31 +1,4 @@
- /* *********************************** Main Style **************************************************************** */
 
-
- #icon{
-    cursor: pointer;
-    width: 30PX;
-    height: 30PX;
-    position: relative;
-    top: 5px;
-}
-/* .light {
-    --primary-color:#fff;
-    --secandory-color:#212121
-    }
-    
-.dark {
-    --primary-color:#000;
-    --secandory-color:#fff
-    }
-
-
-body{
-    background-color: var(--primary-color);
-    color: var(--secandory-color);
-    font-family: 'Ubuntu', sans-serif;
-} */
-
-  /* *************************************************************************************************** */
   /* Start Global Rules */
 * {
     box-sizing: border-box;
@@ -71,61 +44,75 @@ ul {
         width: 1170px;
     }
 }
+
  #icon{
-    position: absolute;
-    right: 0;
+    position: relative;
+    right: -5px;
+    top:0;
     cursor: pointer;
-    width: 30px;
-    
-  
+    width: 40px;
+    transform: scale(0.7);  
   }
+  @media (max-width: 767px) {
+    #icon {
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        }
+    }
   :root{
     --background-color:#E2DBD4;
     --nav-color:#39313C;
     --font-color:#000;
     --card-color:#39313C;
-    --button-color:#D36B00;
+    --button-color:#8E05C2;
     --sidenav-color:#39313C;
+
     --font-family: 'Ubuntu', sans-serif;
-    
+    --login-color:#8E05C2;
     --image:url("../Image/13.png");
+
 }
 .light {
     --background-color:#fff;
-    --nav-color:#fff;
+    --nav-color:#fbf0ff;
     --font-color:#000;
-    --card-color:#fff;
-    --button-color:#D36B00;
+    --card-color:#ab7dc6;
+    --button-color:#8E05C2;
     --sidenav-color:#E2DBD4;
     --navfont:#E2DBD4;
-    
+    --complete-color : #278d27;
     --image:url("../Image/13.png");
+    --sidenav-color:#39313C;
 
 
     }
     
 .dark {
-    --nav-color:#000;
-
-    --background-color:#1A1A20;
-    --sidenav-color:#E2DBD4;
-    --card-color:#1D1E29;
+    --complete-color : #07b007;
+    --nav-color:#11001deb;
+    --background-color:#000000;
+    --sidenav-color:#271034;
+    --card-color:#432b52;
     --font-color:#fff;
-    --button-color:#D36B00;
+    --button-color:#8E05C2;
     --navfont:#FFF;
     --image:url("../Image/12.jpg");
+    --sidenav-color:#39313C;
 
 
     }
   
   
   body{
+
       background-color: var(--background-color);
       color: var(--font-color);
       font-family: var(--font-family)!important;
 
   }
   
+  /* *************************************************************************************************** */
   
 h1 {
     font-size: 350%;
@@ -143,16 +130,3 @@ p{
 }
 
 
-
-header .logo {
-    text-transform: uppercase;
-    font-size: 100;
-}
-
-header .logo h2 a {
-    color: var(--logo-color);
-}
-
-header .logo span {
-    color: #D36B00;
-}

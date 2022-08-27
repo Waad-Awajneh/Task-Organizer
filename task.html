@@ -4,117 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS-Files/task.css">
     <link rel="stylesheet" href="./CSS-Files/style.css">
+    <link rel="stylesheet" href="./CSS-Files/task.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/yourcode.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sweetalert2.min.css">    <title>Tasks</title>
   </head>
+
   <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <h2 class="heading"><a class="link" href="#">
-                        <p class="logo">To Do </p>
-                </h2></a>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li bold class="active"><a class="link" href="#">Home</a></li>
-                    <li><a class="link" href="#">What is</a></li>
-                    <li><a class="link" href="#">Login</a></li>
-                    <img src="./Image/moon.png" width="30PX" id="icon" type="button" onclick="toggleDark()">
-                           </ul>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container-fluid">
-        <div class="row flex-nowrap">
-          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-3 text-white min-vh-100">
-            
-              <container id="form" style="padding-top: 25px;">
-    
-                <form>
-
-                    <div class="form_data">
-        
-                        <label for="search"> Search <br></label>
-                        <input type="search" name="search" id="search" required>
-                    </div>
-                    <div class="form_data">
-                        <label for="Title"> Task Title <br></label>
-                        <input type="text" name="Title" id="Title" required>
-                    </div>
-                    <div class="form_data">
-                        <label for="pro"> Task Priority <br></label>
-                        <input type="text" name="pro" id="pro" required>
-                    </div>
-                    <div class="form_data">
-        
-                        <label for="deadline"> DeadLine <br></label>
-                        <input type="date" name="deadline" id="deadline" required>
-                    </div>
-                    <div class="form_data">
-                        <label for="desc"> Task Description <br></label>
-                        <textarea name="desc" id="desc" required></textarea>
-                    </div>
-                    <div class="form_data">
-                      <button class="input" type="submit" > Done </button>
-                    </div>
-        
-        
-        
-                </form>
-              </container>
-            </div>
+      <div class="container">
+          <div class="logo">
+              <h2><a class="link" href="#">
+                      way to
+                      <p> <span>Success</span> </p>
+              </h2></a>
           </div>
-
-
-          <div class="col py-3 r-content">
-            <div class="welcome row "><p>
-            HI <span id="firstname">First Name</span> ,<br><h1> Welcome back <img id ="party" src="./Image/confetti.png"></h1></p>
-            </div>
-
-
-
-            <div class="row">
-            <div id="all-tasks">
-                <div class="task">
-                 
-                <h1>task title</h1>
-                <p>task description</p>
-                <p>deadline</p>
-                
-                <input type="checkbox" id="completed"/>
-                <label for="completed" > Done </label>
-                <p class="state" ><span>State</span>
-                <span>Proiority</span></p>
-                <div class="text">
-             </div>
-           
-            </div>
-
-        </div>
-        </div>
-      </div> <!-- col two end -->
-     </div>
-     
+          <div class="nav">
+              <ul>
+                  <li >My Tasks</li>
+                  <li>Priority
+                    <div class="DL " >
+                      <p class="drop-list" id="critical">Critical</p>
+                      <p class="drop-list">Normal</p>
+                      <p class="drop-list"> Low priority</p>
+                    </div>
+                  </li>
+                  <li>State
+                    <div class="DL " >
+                      <p class="drop-list">Complete</p>
+                      <p class="drop-list">Uncomplete</p>
+                    </div>
+                  </li>
+                  <li class="logout">Log out</li>
+              <!-- dark mode icon  -->
+              <img src="./Image/moon.png" width="30PX" id="icon" type="button" onclick="toggleDark()">
+              </ul>
+          </div>
       </div>
+  </header>  
 
+  <main>
+      <div class="all-component">
+        <div class="form">
+      
+            <h3>Add New Task</h3>
+            <form action="" id="askform">
+                <div class="form_data">
+                  <label for="Title"> Task Title </label>
+                  <input type="text" name="Title" id="Title" required>
+                </div>  
+  
+                <div class="form_data">
+                  <label for="Task-Priority"> Task Priority </label>
+                  <select name="Task-Priority" id="Task-Priority">
+                    <option value="Critical">Critical</option>
+                    <option value="Normal" selected>Normal</option>
+                    <option value="Low-priority">Low priority</option>
+                  </select>
+  
+                </div>
+                <div class="form_data">
+                    <label for="deadline"> DeadLine </label>
+                    <input type="date" name="deadline" id="deadline" required>
+                </div>
+                <div class="form_data">
+                    <label for="desc"> Task Description </label>
+                    <textarea name="desc" id="desc" required></textarea>
+                </div>
+                <div class="form_data">
+                  <button class="input" type="submit"id="add"> ADD </button>
+                  <button  id="save" type="button" style="display: none;"> Save </button>
+                </div>
+            </form>
+        </div>
+        <div class="workspace">
+          <div class="welcomeMasg">
+            <h2>Hello First Name, </h2>
+            <p>welcome to website name
+              We are thrilled to have you on board, Enjoy.
+            </p>
+            <div class="all-task">
+
+            </div>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+        <span class="delete">
+          <i class="fa-solid fa-trash"></i>
+            <div class="typeClear">
+                <p class="clear all">All Tasks</p>
+                <p class="clear" id="compClear">Completed Tasks</p>
+            </div>
+        </span>
+      </div>
 
     </main>
     <footer>
@@ -127,30 +112,6 @@
     ></script>
     <script src="./JS-Files/app.js"></script>
     <script src="./JS-Files/task.js"></script>
-  </body>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-<!-- <div class="dropdown pb-4">
-    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-        <span class="d-none d-sm-inline mx-1">loser</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-    </ul>
-
-</div> -->
