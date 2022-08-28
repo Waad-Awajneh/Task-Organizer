@@ -179,7 +179,10 @@ header .nav ul li:hover {
   overflow-y: scroll;
   transition: 0.5s;
 }
-
+#color {
+  color: var(--button-color);
+  font-weight: 600;
+}
 
 .all-component .form::-webkit-scrollbar {
   width: 2px;
@@ -518,6 +521,7 @@ i.fa-plus {
     margin: 20px 30px;
   } */
 }
+
 
 /* @media screen and (min-width:321px) and (max-width: 480px) {
 

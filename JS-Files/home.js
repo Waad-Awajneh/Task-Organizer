@@ -70,7 +70,7 @@ function signUpFunc(event) {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'invalid  Email',
+      text: 'This Email is already used',
       denyButtonColor: '#8E05C2',
 
     })

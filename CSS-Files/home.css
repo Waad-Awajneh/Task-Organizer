@@ -376,9 +376,9 @@ height: 20vh;
 }
 
 .overlay {
-  background: #700B97;
-  background: -webkit-linear-gradient(to right, #700B97, #9225bd);
-  background: linear-gradient(to right, #700B97, #9225bd);
+  background: #6dd29c;
+  background: -webkit-linear-gradient(to right, #6dd29c, #6dd29c);
+  background: linear-gradient(to right, #6dd29c, #6dd29c);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
