@@ -14,15 +14,15 @@ Edit todo cards
  logged out
 
 # Team members :
-Osama Dosoky
-Ahmad Zahran
-Ibrahim Taqieddin
-Rama Jaradat
-Waad Awajneh
+1. Osama Dosoky
+2. Ahmad Zahran
+3. Ibrahim Taqieddin
+4. Rama Jaradat
+5. Waad Awajneh
 
-🔗 live link : [a link] (https://waad-awajneh.github.io/Task-Organizer/)
-🔗 Trello link : [a link] (https://trello.com/b/YStX5fIr/project)
-🔗 repo Organization link : [a link] (https://github.com/Task-Organizer/Main-Task-Organizer)
-🔗 repo link : [a link] (https://github.com/Waad-Awajneh/Task-Organizer)
-🔗 figma link : [a link] (https://www.figma.com/file/m14hwk33owrPh18PVD4dYM/task-organizaer?node-id=0%3A1)
-[Mockup and Wireframe](task-organizaer.pdf)
+1. 🔗 live link : [a link] (https://waad-awajneh.github.io/Task-Organizer/)
+2. 🔗 Trello link : [a link] (https://trello.com/b/YStX5fIr/project)
+3. 🔗 repo Organization link : [a link] (https://github.com/Task-Organizer/Main-Task-Organizer)
+4. 🔗 repo link : [a link] (https://github.com/Waad-Awajneh/Task-Organizer)
+5. 🔗 figma link : [a link] (https://www.figma.com/file/m14hwk33owrPh18PVD4dYM/task-organizaer?node-id=0%3A1)
+6. [Mockup and Wireframe](task-organizaer.pdf)
