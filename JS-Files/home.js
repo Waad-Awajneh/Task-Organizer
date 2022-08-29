@@ -10,6 +10,7 @@ signIn.addEventListener("click", () => {
   containerLOG.classList.remove("right-panel-active");
 });
 const close = document.getElementById("close");
+
 joinus.addEventListener("click", addActive )
 login.addEventListener("click", addActive);
 close.addEventListener("click",removeActive)
@@ -25,7 +26,6 @@ function removeActive() {
   document.querySelector(".hero-text").classList.remove("blur")
 
 }
-
 
 //waed & rama -------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ function signUpFunc(event) {
     localStorage.setItem("current", JSON.stringify(currentUser));
     goToTask()
     document.forms[0].reset();
-    
+
   } else {
     Swal.fire({
       icon: 'error',
@@ -81,13 +81,12 @@ function signUpFunc(event) {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text:"invalid password or email pattern ",
+      text:"Invalid Password or Email pattern ",
       denyButtonColor: '#8E05C2',
 
     })
-  }}
-
-
+  }
+}
 function checkEmail(E) {
   let rightUser = allUsers.filter((user) => {
     if (user.email == E) return true;
@@ -167,10 +166,13 @@ email.addEventListener('blur', () => {
   const emailValue = document.querySelector("#email").value;
   if (patterns.email.test(emailValue)) {
     email.style.border = '3px solid green';
+    email.classList.remove("active")
   } else {
-    email.style.border = '3px solid red';
+  email.style.border = '3px solid red';
+  email.classList.add("active")
   }
 })
+
 password.addEventListener('input', () => {
   const passwordValue = document.querySelector("#password").value;
   if (patterns.password.test(passwordValue)) {

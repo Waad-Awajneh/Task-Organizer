@@ -59,11 +59,12 @@ function taskFormFunc(event) {
   saveTaskToLocal();
   print(newTask);
   document.forms[0].reset();
+
   const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
-    timer: 3000,
+    timer: 2000,
     timerProgressBar: true,
     didOpen: (toast) => {
       toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -97,19 +98,17 @@ function getTaskFromLocal() {
     AllUserTasks = arrOfObjct;
     AllUserTasks.forEach((task) => {
       print(task);
-      // return arrOfObjct
     });
   } else {
     document.querySelector(".all-task").innerHTML = `<h3>There are no tasks to display. <span id ="noTasks">Let's put the first one up.</span></h3>`
   }
 } 
-
 // filter task base Priority
 const critical = document.querySelectorAll(".drop-list")[0];
 let tasks = document.querySelector(".all-task")
 critical.addEventListener("click",  () => {
   tasks.innerHTML = "";
-  let filteredTasks = AllUserTasks.filter(ele => {
+  let filteredTasks = AllUserTasks.filter( ele => {
     if (ele.priority == `Critical`) {
       print(ele)
       return true
@@ -118,8 +117,6 @@ critical.addEventListener("click",  () => {
   if (filteredTasks.length == 0) {
     tasks.innerHTML = `<h3>There are no <span id ="noTasks">Critical tasks </span>  to display.`;  
   }
-
-  // console.log(filteredTasks); 
 })
 
 const Normal = document.querySelectorAll(".drop-list")[1];
@@ -177,7 +174,6 @@ uncompleted.addEventListener("click", () => {
       print(ele)
       return true
     }
-    
   })
   if (filteredTasks.length == 0) {
     tasks.innerHTML = `<h3>There are no <span id ="noTasks">Uncompleted  </span> tasks to display.`;  
@@ -230,8 +226,8 @@ completedClear.addEventListener("click", () => {
     text: "You won't be able to revert this!",
     icon: 'error',
     showCancelButton: true,
-    confirmButtonColor: '#9415c6',
-    cancelButtonColor: '#d33',
+    confirmButtonColor: 'red',
+    cancelButtonColor: '#9415c6',
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
@@ -244,7 +240,7 @@ completedClear.addEventListener("click", () => {
       })
       AllUserTasks = filteredTasks;
       saveTaskToLocal()
-      // console.log(filteredTasks);
+
       if (filteredTasks.length == 0) {
         tasks.innerHTML = `<h3>There are no <span id ="noTasks" >tasks </span>  to display.`;  
       }
@@ -376,8 +372,8 @@ function deleteTask(userTask) {
       text: "You won't be able to revert this!",
       icon: 'error',
       showCancelButton: true,
-      confirmButtonColor: '#9415c6',
-      cancelButtonColor: 'red',
+      confirmButtonColor: 'red',
+      cancelButtonColor: '#9415c6',
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
@@ -421,7 +417,7 @@ function updateTask(userTask) {
   });
 
   const { value: formValues } =  Swal.fire({
-    title: 'Multiple inputs',
+    title: 'Edit Task information',
     html:
       `<input type="text" id="swal-input1" class="swal2-input" value="${userTask.title}"  >` +
       `<input type="date" id="swal-input2" class="swal2-input"  value="${userTask.deadline}" >`+
