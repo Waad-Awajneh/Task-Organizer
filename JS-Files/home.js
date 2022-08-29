@@ -57,7 +57,9 @@ function signUpFunc(event) {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  if (checkEmail(email)) {
+  if(patterns.email.test(email)&& patterns.password.test(password)){
+
+  if (checkEmail(email)){
     let newUser = new User(fname, lname, email, password);
     allUsers.push(newUser);
     currentUser = newUser;
@@ -74,9 +76,18 @@ function signUpFunc(event) {
       denyButtonColor: '#8E05C2',
 
     })
-  }
+  }}
+  else{
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text:"invalid password or email pattern ",
+      denyButtonColor: '#8E05C2',
 
-}
+    })
+  }}
+
+
 function checkEmail(E) {
   let rightUser = allUsers.filter((user) => {
     if (user.email == E) return true;
