@@ -22,4 +22,5 @@ Reduces stress.
 3. 🔗 repo Organization link : [a link] (https://github.com/Task-Organizer/Main-Task-Organizer)
 4. 🔗 repo link : [a link] (https://github.com/Waad-Awajneh/Task-Organizer)
 5. 🔗 figma link : [a link] (https://www.figma.com/file/m14hwk33owrPh18PVD4dYM/task-organizaer?node-id=0%3A1)
-6. [Mockup and Wireframe](task-organizaer.pdf)
+6 [Wireframe](https://github.com/Waad-Awajneh/Task-Organizer/files/9443333/task-organizaerwaerfram.pdf)
+7. [Mockup.pdf](https://github.com/Waad-Awajneh/Task-Organizer/files/9443304/home.pdf)
